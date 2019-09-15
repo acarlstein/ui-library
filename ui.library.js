@@ -11,7 +11,7 @@ $(function() {
     $(this).parent().find(".toggle-icon").toggleClass("down").toggleClass("up");
   });
   
-  // Radio Toggles
+  // Checkbox / Radio Toggles
   $('input[type=checkbox].toggle').on("change", function () {
     $('label[for='.concat($(this).attr('id')).concat('] i.fa')).toggleClass('fa-toggle-on fa-toggle-off');
   });
