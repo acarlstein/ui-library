@@ -1,0 +1,369 @@
+// Author: Alejandro Godofredo Carlstein Ramos Mejia.
+// Copyright 2019
+$white-base:      #FFF !default;
+$black-base:      #000 !default;
+$gray-darker:     lighten($black-base, 13.6%) !default;
+$gray-dark:       lighten($black-base, 20.1%) !default;   
+$gray:            lighten($black-base, 33.6%) !default; 
+$gray-light:      lighten($black-base, 46.8%) !default; 
+$gray-lighter:    lighten($black-base, 93.6%) !default; 
+$success:         #4cb95d !default;
+$info:            #6bc1df !default;
+$warning:         #f09d4c !default;
+$danger:          #c9434e !default;
+$primary:         darken(#539bcb, 6.5%) !default;
+$muted:           $gray-light !default;
+
+.text {
+  color: $gray-darker;
+  &.highlight {
+    text-transform: none;
+    font-weight: bold;
+  }
+  &.icon::before{
+    padding-right: 5px;
+  }
+  &.success{
+    color: $success;
+  }
+  &.info{
+    color: $info;
+  }
+  &.warning{
+    color: $warning;
+  }
+  &.danger{
+    color: $danger;
+  }
+  &.primary{
+    color: $primary;
+  }
+  &.muted{
+    color: $muted;
+  }  
+}
+
+label {  
+  font-weight: bold;
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.tag {
+  @extend .text;
+  font-weight: normal;
+  display: inline-block;
+  line-height: 1;
+  padding: 4px 8px;
+  margin: 0 4px 4px 0;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  border: 1px solid $black-base;
+  color: $black-base;
+  background-color: $white-base;
+  &.success{
+    color: $white-base;
+    background-color: $success;
+    border: 1px solid $success;
+  }
+  &.info{
+    color: $white-base;
+    background-color: $info;
+    border: 1px solid $info;
+  }
+  &.warning{
+    color: $white-base;
+    background-color: $warning;
+    border: 1px solid $warning;
+  }
+  &.danger{
+    color: $white-base;
+    background-color: $danger;
+    border: 1px solid $danger;
+  }
+  &.primary{
+    color: $white-base;
+    background-color: $primary;
+    border: 1px solid $primary;
+  }
+  &.muted{
+    color: $white-base;
+    background-color: $muted;
+    border: 1px solid $muted;
+  }
+}
+
+ul.clear{
+  padding: 0;
+  margin: 0;
+  li {
+    clear: both;
+    float: left;
+  }
+}
+
+.bg{
+  @extend .text;
+  background-color: $white-base;
+  &.icon::before{
+    padding-left: 5px;
+  }
+  &.success{
+    color: $white-base;
+    background-color: $success;
+  }
+  &.info{
+    color: $white-base;
+    background-color: $info;
+  }
+  &.warning{
+    color: $black-base;
+    background-color: $warning;
+  }
+  &.danger{
+    color: $black-base;
+    background-color: $danger;
+  }
+  &.primary{
+    color: $white-base;
+    background-color: $primary;
+  }
+  &.muted{
+    color: $gray-lighter;
+    background-color: $muted;
+  }
+}
+
+.font-awesome {
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon {
+  &::before {
+    @extend .font-awesome; 
+  }
+  &.success::before{ 
+    content: "\f058";        
+  }
+  &.info::before{ 
+    content: "\f05a";        
+  }
+  &.warning::before{ 
+    content: "\f071";        
+  }
+  &.danger::before{ 
+    content: "\f057";        
+  } 
+}
+
+.badge {
+  @extend .tag;
+  font-size: .9em;
+  border-radius: 10px;
+}
+
+.btn {
+  @extend .tag;
+  font-size: 1em;
+  padding: 10px 20px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);  
+  border: none;
+  background-color: $gray-lighter;
+  transition: all .25s ease;
+  &.icon::before{
+    padding-left: 0px;
+    padding-right: 10px;
+  }
+  &:hover {
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+    &.success {
+      background-color: lighten($success, 4%);
+    }
+    &.info {
+      background-color: lighten($info, 4%);
+    }
+    &.warning {
+      background-color: lighten($warning, 4%);
+    }
+    &.danger {
+      background-color: lighten($danger, 4%);
+    }
+    &.primary {
+      background-color: lighten($primary, 4%);
+    }
+    &.muted {
+      background-color: lighten($muted, 4%);
+    }
+  }
+  &:active {
+    box-shadow: inset 2px 2px 0 rgba(0, 0, 0, 0.5);   
+  }
+}
+
+a {
+  @extend .text;
+  text-decoration: underline;
+  &:link{
+    color: darken(blue, 25%); 
+    &.success{
+      color: darken($success, 10%);
+    }
+    &.info{
+      color: darken($info, 10%);
+    }
+    &.warning{
+      color: darken($warning, 10%);
+    }
+    &.danger{
+      color: darken($danger, 10%);
+    }
+    &.primary{
+      color: darken($primary, 10%);
+    }
+    &.muted{
+      color: darken($muted, 10%);
+    }
+  }
+  &:visited {
+    color: darken(purple, 10%);
+    &.success{
+      color: darken($success, 25%);
+    }
+    &.info{
+      color: darken($info, 25%);
+    }
+    &.warning{
+      color: darken($warning, 25%);
+    }
+    &.danger{
+      color: darken($danger, 25%);
+    }
+    &.primary{
+      color: darken($primary, 25%);
+    }
+    &.muted{
+      color: darken($muted, 25%);
+    }
+  }
+  &:active {
+    color: darken(red, 10%); 
+    &.success{
+      color: lighten($success, 10%);
+    }
+    &.info{
+      color: lighten($info, 10%);
+    }
+    &.warning{
+      color: lighten($warning, 10%);
+    }
+    &.danger{
+      color: lighten($danger, 10%);
+    }
+    &.primary{
+      color: lighten($primary, 10%);
+    }
+    &.muted{
+      color: lighten($muted, 10%);
+    }
+  } 
+  &:hover {
+    color: lighten(blue, 10%);
+    &.success{
+      color: lighten($success, 10%);
+    }
+    &.info{
+      color: lighten($info, 10%);
+    }
+    &.warning{
+      color: lighten($warning, 10%);
+    }
+    &.danger{
+      color: lighten($danger, 10%);
+    }
+    &.primary{
+      color: lighten($primary, 10%);
+    }
+    &.muted{
+      color: lighten($muted, 10%);
+    }
+  }
+}
+
+.card {
+  @extend .text;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 8px; 
+  border-left: 3px solid $gray-light;
+  &.success{
+    border-left: 3px solid $success;
+  }
+  &.info{
+    border-left: 3px solid $info;
+  }
+  &.warning{
+    border-left: 3px solid $warning;
+  }
+  &.danger{
+    border-left: 3px solid $danger;
+  }
+  &.primary{
+    border-left: 3px solid $primary;
+  }
+  &.muted{
+    border-left: 3px solid $muted;
+  }
+  &.icon{
+    display: block;
+  }
+}
+
+.accordion-card {
+  @extend .card;
+  cursor: pointer;
+  & div{
+    cursor: auto;
+  }
+  &::before{
+    @extend .font-awesome;
+  }
+  
+  &.success::before{     
+    content: "\f058";        
+  }
+  &.info::before{ 
+    content: "\f05a";        
+  }
+  &.warning::before{ 
+    content: "\f071";        
+  }
+  &.danger::before{ 
+    content: "\f057";        
+  } 
+  .panel-collapse{
+    padding-top: 5px;
+  }
+  
+  span.toggle-icon {
+    @extend .font-awesome;
+    &.down::before {
+      content: "\f0ab";
+    }
+    &.up::before {
+      content: "\f0aa";
+    }
+  }
+}
+
