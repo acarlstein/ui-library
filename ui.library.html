@@ -12,200 +12,261 @@ Copyright: 2019
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <script src="ui.library.js"></script>
 </head>
-<body>
-  <div class="container">
-     <div class="row">
-      <div class="col">
-        <label><h1>UI Library</h1></label>
-      </div>
+<!-- 
+Author: Alejandro Godofredo Carlstein Ramos Mejia. 
+Copyright: 2019 
+-->
+<div class="container">
+   <div class="row">
+    <div class="col">
+      <label><h1>UI Library</h1></label>
     </div>
-    <div class="row">
-      <div class="col">
-        <label><h2>Containers</h2></label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <label>Accordion Cards</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">      
-        <div class="accordion-card" 
-             data-toggle="collapse" 
-             href="#collapseText">                
-          <span class="toggle-icon down"></span>
-          Click Here
-          <div id="collapseText" class="panel-collapse collapse in">
-            Some text should show up
-          </div>
-        </div>
-        <div class="accordion-card highlight"
-             data-toggle="collapse" 
-             href="#collapseTextHighlight">                
-          <span class="toggle-icon down"></span>
-          Click Here
-          <div id="collapseTextHighlight" class="panel-collapse collapse in">
-            Some text should show up
-          </div>
-        </div>
-        <div class="accordion-card primary"
-             data-toggle="collapse" 
-             href="#collapseTextPrimary">                
-          <span class="toggle-icon down"></span>
-          Click Here
-          <div id="collapseTextPrimary" class="panel-collapse collapse in">
-            Some text should show up
-          </div>
-        </div>      
-        <div class="accordion-card muted"
-             data-toggle="collapse" 
-             href="#collapseTextMuted">                
-          <span class="toggle-icon down"></span>
-          Click Here
-          <div id="collapseTextMuted" class="panel-collapse collapse in">
-            Some text should show up
-          </div>
-        </div>            
-      </div>
-      <div class="col">
-        <div class="accordion-card success"
-             data-toggle="collapse" 
-             href="#collapseTextSuccess">                
-          <span class="toggle-icon down"></span>
-          Click Here
-          <div id="collapseTextSuccess" class="panel-collapse collapse in">
-            Some text should show up
-          </div>
-        </div>            
-        <div class="accordion-card info"
-             data-toggle="collapse" 
-             href="#collapseTextInfo">                
-          <span class="toggle-icon down"></span>
-          Click Here
-          <div id="collapseTextInfo" class="panel-collapse collapse in">
-            Some text should show up
-          </div>
-        </div>           
-        <div class="accordion-card warning"
-             data-toggle="collapse" 
-             href="#collapseTextWarning">                
-          <span class="toggle-icon down"></span>
-          Click Here
-          <div id="collapseTextWarning" class="panel-collapse collapse in">
-            Some text should show up
-          </div>
-        </div>    
-        <div class="accordion-card danger"
-             data-toggle="collapse" 
-             href="#collapseTextWarning">                
-          <span class="toggle-icon down"></span>
-          Click Here
-          <div id="collapseTextWarning" class="panel-collapse collapse in">
-            Some text should show up
-          </div>
-        </div>    
-      </div>
-    </div>  
-    <div class="row">
-      <div class="col">
-        <label>Cards</label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">      
-        <div class="card">Some text</div>
-        <div class="card highlight">Some highlight text</div>
-        <div class="card primary">Primary</div>
-        <div class="card muted">Muted</div>
-      </div>
-      <div class="col">
-        <div class="card icon success">Success</div>
-        <div class="card icon info">Info</div>
-        <div class="card icon warning">Warning</div>
-        <div class="card icon danger">Danger</div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <label><h2>Basic</h2></label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm">
-        <label>Text</label>
-        <div class="text">Some text</div>
-        <div class="text highlight">Some highlight text</div>
-        <div class="text icon success">Success</div>
-        <div class="text icon info">Info</div>
-        <div class="text icon warning">Warning</div>
-        <div class="text icon danger">Danger</div>
-        <div class="text primary">Primary</div>
-        <div class="text muted">Muted</div>
-      </div>
-      <div class="col-sm">
-        <label>Tags</label>
-        <ul class="clear">
-          <li class="tag">Text</li>
-          <li class="tag highlight icon success">Success</li>
-          <li class="tag icon info">Info</li>
-          <li class="tag icon warning">Warning</li>
-          <li class="tag icon danger">Danger</li>
-          <li class="tag primary">Primary</li>
-          <li class="tag muted">Muted</li>        
-        </ul>
-      </div>
-      <div class="col-sm">
-        <label>Background</label>
-        <div class="bg">Text</div>
-        <div class="bg icon success">Success</div>
-        <div class="bg icon info">Info</div>
-        <div class="bg icon warning">Warning</div>
-        <div class="bg icon danger">Danger</div>
-        <div class="bg primary">Primary</div>
-        <div class="bg muted">Muted</div>
-      </div>
-    </div>
-
-      <div class="row">
-      <div class="col-sm">
-        <label>Badge</label>
-        <ul class="clear">
-          <li class="badge">Text</li>
-          <li class="badge highlight icon success">Success</li>
-          <li class="badge icon info">Info</li>
-          <li class="badge icon warning">Warning</li>
-          <li class="badge icon danger">Danger</li>
-          <li class="badge primary">Primary</li>
-          <li class="badge muted">Muted</li>        
-        </ul>
-      </div>
-      <div class="col-sm">
-        <label>Buttons</label>
-        <ul class="clear">
-          <li class="btn">Text</li>
-          <li class="btn highlight icon success">Success</li>
-          <li class="btn icon info">Info</li>
-          <li class="btn icon warning">Warning</li>
-          <li class="btn icon danger">Danger</li>
-          <li class="btn primary">Primary</li>
-          <li class="btn muted">Muted</li>        
-        </ul>     
-      </div>
-      <div class="col-sm">
-        <label>Links</label>
-        <div><a class="link" href="#">Some link</a></div>
-        <div><a class="link highlight" href="#">Some link highlighted</a></div>
-        <div><a class="icon success" href="#">Success</a></div>
-        <div><a class="icon info" href="#">Info</a></div>
-        <div><a class="icon warning" href="#">Warning</a></div>
-        <div><a class="icon danger" href="#">Danger</a></div>
-        <div><a class="primary" href="#">Primary</a></div>
-        <div><a class="muted" href="#">Muted</a></div>
-      </div>
-      </div>
-    </div>  
   </div>
+  <div class="row">
+    <div class="col">
+      <label><h2>Containers</h2></label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Panels</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="panel">
+        <div class="panel title">Title</div>
+        <div class="panel body">Body</div>
+      </div>
+      <div class="panel success">
+        <div class="panel title success">Title Success</div>
+        <div class="panel body">Body</div>
+      </div>
+      <div class="panel info">
+        <div class="panel title info">Title Info</div>
+        <div class="panel body">Body</div>
+      </div> 
+      <div class="panel warning">
+        <div class="panel title warning">Title Warning</div>
+        <div class="panel body">Body</div>
+      </div>
+      <div class="panel danger">
+        <div class="panel title danger">Title Danger</div>
+        <div class="panel body">Body</div>
+      </div>
+      <div class="panel primary">
+        <div class="panel title primary">Title Primary</div>
+        <div class="panel body">Body</div>
+      </div>       
+      <div class="panel muted">
+        <div class="panel title muted">Title Muted</div>
+        <div class="panel body muted">Body</div>
+      </div>
+      <div class="panel success">
+        <div class="panel title success">Nested Panels Title</div>
+        <div class="panel body">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <div class="panel warning">
+                  <div class="panel title warning">Title</div>
+                  <div class="panel body">Body</div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="panel danger">
+                  <div class="panel title danger">Title</div>
+                  <div class="panel body">Body</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Accordion Cards</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">      
+      <div class="accordion-card" 
+           data-toggle="collapse" 
+           href="#collapseText">                
+        <span class="toggle-icon down"></span>
+        Click Here
+        <div id="collapseText" class="panel-collapse collapse in">
+          Some text should show up
+        </div>
+      </div>
+      <div class="accordion-card highlight"
+           data-toggle="collapse" 
+           href="#collapseTextHighlight">                
+        <span class="toggle-icon down"></span>
+        Click Here
+        <div id="collapseTextHighlight" class="panel-collapse collapse in">
+          Some text should show up
+        </div>
+      </div>
+      <div class="accordion-card primary"
+           data-toggle="collapse" 
+           href="#collapseTextPrimary">                
+        <span class="toggle-icon down"></span>
+        Click Here
+        <div id="collapseTextPrimary" class="panel-collapse collapse in">
+          Some text should show up
+        </div>
+      </div>      
+      <div class="accordion-card muted"
+           data-toggle="collapse" 
+           href="#collapseTextMuted">                
+        <span class="toggle-icon down"></span>
+        Click Here
+        <div id="collapseTextMuted" class="panel-collapse collapse in">
+          Some text should show up
+        </div>
+      </div>            
+    </div>
+    <div class="col">
+      <div class="accordion-card success"
+           data-toggle="collapse" 
+           href="#collapseTextSuccess">                
+        <span class="toggle-icon down"></span>
+        Click Here
+        <div id="collapseTextSuccess" class="panel-collapse collapse in">
+          Some text should show up
+        </div>
+      </div>            
+      <div class="accordion-card info"
+           data-toggle="collapse" 
+           href="#collapseTextInfo">                
+        <span class="toggle-icon down"></span>
+        Click Here
+        <div id="collapseTextInfo" class="panel-collapse collapse in">
+          Some text should show up
+        </div>
+      </div>           
+      <div class="accordion-card warning"
+           data-toggle="collapse" 
+           href="#collapseTextWarning">                
+        <span class="toggle-icon down"></span>
+        Click Here
+        <div id="collapseTextWarning" class="panel-collapse collapse in">
+          Some text should show up
+        </div>
+      </div>    
+      <div class="accordion-card danger"
+           data-toggle="collapse" 
+           href="#collapseTextWarning">                
+        <span class="toggle-icon down"></span>
+        Click Here
+        <div id="collapseTextWarning" class="panel-collapse collapse in">
+          Some text should show up
+        </div>
+      </div>    
+    </div>
+  </div>  
+  <div class="row">
+    <div class="col">
+      <label>Cards</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">      
+      <div class="card">Some text</div>
+      <div class="card highlight">Some highlight text</div>
+      <div class="card primary">Primary</div>
+      <div class="card muted">Muted</div>
+    </div>
+    <div class="col">
+      <div class="card icon success">Success</div>
+      <div class="card icon info">Info</div>
+      <div class="card icon warning">Warning</div>
+      <div class="card icon danger">Danger</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label><h2>Basic</h2></label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <label>Text</label>
+      <div class="text">Some text</div>
+      <div class="text highlight">Some highlight text</div>
+      <div class="text icon success">Success</div>
+      <div class="text icon info">Info</div>
+      <div class="text icon warning">Warning</div>
+      <div class="text icon danger">Danger</div>
+      <div class="text primary">Primary</div>
+      <div class="text muted">Muted</div>
+    </div>
+    <div class="col-sm">
+      <label>Tags</label>
+      <ul class="clear">
+        <li class="tag">Text</li>
+        <li class="tag highlight icon success">Success</li>
+        <li class="tag icon info">Info</li>
+        <li class="tag icon warning">Warning</li>
+        <li class="tag icon danger">Danger</li>
+        <li class="tag primary">Primary</li>
+        <li class="tag muted">Muted</li>        
+      </ul>
+    </div>
+    <div class="col-sm">
+      <label>Background</label>
+      <div class="bg">Text</div>
+      <div class="bg icon success">Success</div>
+      <div class="bg icon info">Info</div>
+      <div class="bg icon warning">Warning</div>
+      <div class="bg icon danger">Danger</div>
+      <div class="bg primary">Primary</div>
+      <div class="bg muted">Muted</div>
+    </div>
+  </div>
+  
+    <div class="row">
+    <div class="col-sm">
+      <label>Badge</label>
+      <ul class="clear">
+        <li class="badge">Text</li>
+        <li class="badge highlight icon success">Success</li>
+        <li class="badge icon info">Info</li>
+        <li class="badge icon warning">Warning</li>
+        <li class="badge icon danger">Danger</li>
+        <li class="badge primary">Primary</li>
+        <li class="badge muted">Muted</li>        
+      </ul>
+    </div>
+    <div class="col-sm">
+      <label>Buttons</label>
+      <ul class="clear">
+        <li class="btn">Text</li>
+        <li class="btn highlight icon success">Success</li>
+        <li class="btn icon info">Info</li>
+        <li class="btn icon warning">Warning</li>
+        <li class="btn icon danger">Danger</li>
+        <li class="btn primary">Primary</li>
+        <li class="btn muted">Muted</li>        
+      </ul>     
+    </div>
+    <div class="col-sm">
+      <label>Links</label>
+      <div><a class="link" href="#">Some link</a></div>
+      <div><a class="link highlight" href="#">Some link highlighted</a></div>
+      <div><a class="icon success" href="#">Success</a></div>
+      <div><a class="icon info" href="#">Info</a></div>
+      <div><a class="icon warning" href="#">Warning</a></div>
+      <div><a class="icon danger" href="#">Danger</a></div>
+      <div><a class="primary" href="#">Primary</a></div>
+      <div><a class="muted" href="#">Muted</a></div>
+    </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
 
