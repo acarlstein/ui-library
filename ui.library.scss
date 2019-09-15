@@ -148,21 +148,37 @@ ul.clear{
   -webkit-font-smoothing: antialiased;
 }
 
+.fa-icon-success {
+  content: "\f058"; 
+}
+
+.fa-icon-info {
+  content: "\f05a";
+}
+
+.fa-icon-warning {
+  content: "\f071";
+}
+
+.fa-icon-danger { 
+    content: "\f057";        
+} 
+
 .icon {
   &::before {
     @extend .font-awesome; 
   }
   &.success::before{ 
-    content: "\f058";        
+    @extend .fa-icon-success;        
   }
   &.info::before{ 
-    content: "\f05a";        
+    @extend .fa-icon-info;        
   }
   &.warning::before{ 
-    content: "\f071";        
+    @extend .fa-icon-warning;        
   }
   &.danger::before{ 
-    content: "\f057";        
+    @extend .fa-icon-danger;        
   } 
 }
 
@@ -305,8 +321,10 @@ a {
   box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.5);
   margin-top: 10px;
   margin-bottom: 10px;
-  padding: 8px; 
+  padding: 8px;
+  border-top: 1px solid $gray-light;
   border-left: 3px solid $gray-light;
+  border-right: 1px solid $gray-light;
   &.success{
     border-left: 3px solid $success;
   }
@@ -341,16 +359,16 @@ a {
   }
   
   &.success::before{     
-    content: "\f058";        
+    @extend .fa-icon-success;
   }
   &.info::before{ 
-    content: "\f05a";        
+    @extend .fa-icon-info;
   }
   &.warning::before{ 
-    content: "\f071";        
+    @extend .fa-icon-warning;    
   }
   &.danger::before{ 
-    content: "\f057";        
+    @extend .fa-icon-danger;    
   } 
   .panel-collapse{
     padding-top: 5px;
@@ -367,3 +385,75 @@ a {
   }
 }
 
+.panel{
+  @extend .card;
+  border-top: 3px solid $gray-light;
+  &.success{
+    border-top: 3px solid $success;
+  }
+  &.info{
+    border-top: 3px solid $info;
+  }
+  &.warning{
+    border-top: 3px solid $warning;
+  }
+  &.danger{
+    border-top: 3px solid $danger;
+  }
+  &.primary{
+    border-top: 3px solid $primary;
+  }
+  &.muted{
+    border-top: 3px solid $muted;
+  }  
+  &.title{
+    @extend .font-awesome;
+    font-size: 1.5em;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    box-shadow: 0px 2px 0 0 rgba($gray-light, 0.5);
+    border-bottom: 3px solid $gray-light;
+    padding-right: 10px;
+    &.success {    
+      border-bottom: 3px solid $success;      
+      &::before{     
+        padding-right: 10px;
+        @extend .fa-icon-success;        
+      }   
+    }
+    &.info {    
+      border-bottom: 3px solid $info;      
+      &::before{     
+        padding-right: 10px;
+        @extend .fa-icon-info;        
+      }   
+    }
+    &.warning {    
+      border-bottom: 3px solid $warning;      
+      &::before{     
+        padding-right: 10px;
+        @extend .fa-icon-warning;        
+      }   
+    }
+    &.danger {    
+      border-bottom: 3px solid $danger;      
+      &::before{     
+        padding-right: 10px;
+        @extend .fa-icon-danger;        
+      }   
+    }    
+    &.primary {    
+      border-bottom: 3px solid $primary;         
+    } 
+    &.muted {    
+      border-bottom: 3px solid $muted;         
+    } 
+  }
+  &.body{
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;    
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+  }
+}
