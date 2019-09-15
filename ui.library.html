@@ -20,7 +20,86 @@ Copyright: 2019
   </div>
   <div class="row">      
     <div class="col">
-      <label>Horizontal Buttons</label><br/>
+      <label>(Checkbox) Horizontal Toggle Buttons</label><br/>
+      <div>
+        <div class="btn-group btn-group-toggle" 
+             data-toggle="buttons">
+          <label class="btn btn-secondary active left">
+            <input type="checkbox" name="options" id="optionX" autocomplete="off" checked> Option X
+          </label>
+          <label class="btn btn-secondary center">
+            <input type="checkbox" name="options" id="optionY" autocomplete="off"> Option Y
+          </label>
+          <label class="btn btn-secondary right">
+            <input type="checkbox" name="options" id="optionZ" autocomplete="off"> Option Z
+          </label>
+        </div>  
+      </div>
+      <br/>
+      <div>
+        <div class="btn-group btn-group-toggle" 
+             data-toggle="buttons">
+          <label class="btn btn-secondary active left">
+            <input type="checkbox" name="options" id="optionA" autocomplete="off" checked> Option A
+          </label>
+          <label class="btn btn-secondary center muted">
+            <input type="checkbox" name="options" id="option2" autocomplete="off" disabled> Option B
+          </label>
+          <label class="btn btn-secondary right">
+            <input type="checkbox" name="options" id="option3" autocomplete="off"> Option C
+          </label>
+        </div>  
+      </div>           
+    </div>
+    <div class="col radio-buttons">
+      <label>(Checkbox) Toggles</label>
+      <div class="btn-toggle success">
+        <input type="checkbox" class="toggle" id="checkbox-toggle-1" value="checkbox1" checked="">
+        <label for="checkbox-toggle-1">
+          <i class="fa fa-2x fa-toggle-on"></i>
+          <span class="text success">Option 1</span>
+        </label>
+      </div> 
+      <div class="btn-toggle warning">
+        <input type="checkbox" class="toggle" id="checkbox-toggle-2" value="checkbox2">
+        <label for="checkbox-toggle-2">
+          <i class="fa fa-2x fa-toggle-off"></i>
+          <span class="text warning">Option 2</span>
+        </label>
+      </div> 
+      <div class="btn-toggle muted">
+        <input type="checkbox" class="toggle" id="checkbox-toggle-3" value="checkbox2" disabled="">
+        <label for="checkbox-toggle-3">
+          <i class="fa fa-2x fa-toggle-off"></i>
+          <span class="text muted">Option 3</span>
+        </label>
+      </div>
+      <span class="btn-toggle success">
+        <input type="checkbox" class="toggle" id="checkbox-toggle-q" value="checkboxQ" checked="">
+        <label for="checkbox-toggle-q">
+          <i class="fa fa-2x fa-toggle-on fa-rotate-90"></i>
+          <span class="text success">Option Q</span>
+        </label>
+      </span> 
+      <span class="btn-toggle warning">
+        <input type="checkbox" class="toggle" id="checkbox-toggle-w" value="checkboxW">
+        <label for="checkbox-toggle-w">
+          <i class="fa fa-2x fa-toggle-off fa-rotate-90"></i>
+          <span class="text warning">Option W</span>
+        </label>
+      </span> 
+      <span class="btn-toggle muted">
+        <input type="checkbox" class="toggle" id="checkbox-toggle-e" value="checkboxE" disabled="">
+        <label for="checkbox-toggle-e">
+          <i class="fa fa-2x fa-toggle-off fa-rotate-90"></i>
+          <span class="text muted">Option E</span>
+        </label>
+      </span>      
+    </div>
+  </div>
+  <div class="row">      
+    <div class="col">
+      <label>(Radio) Horizontal Toggle Buttons </label><br/>
       <div>
         <div class="btn-group btn-group-toggle" 
              data-toggle="buttons">
@@ -53,66 +132,62 @@ Copyright: 2019
     </div>
     
     <div class="col radio-buttons">
-      <label>Radio Toggles</label>
-      <div class="radio-toggle success">
+      <label>(Radio) Toggles</label>
+      <div class="btn-toggle success">
         <input type="radio" class="toggle"
                name="radio-toggle-group" id="radio-toggle-1"
                value="radio1" checked="">
         <label class="radio" for="radio-toggle-1">
           <i class="fa fa-2x fa-toggle-on"></i>
-          <span class="radio-text success">Option 1</span>
+          <span class="text success">Option 1</span>
         </label>
       </div> 
-      <div class="radio-toggle warning">
+      <div class="btn-toggle warning">
         <input type="radio" class="toggle" 
                name="radio-toggle-group" id="radio-toggle-2"                  
                value="radio2">
         <label class="radio" for="radio-toggle-2">
           <i class="fa fa-2x fa-toggle-off"></i>
-          <span class="radio-text warning">Option 2</span>
+          <span class="text warning">Option 2</span>
         </label>
       </div> 
-      <div class="radio-toggle muted">
+      <div class="btn-toggle muted">
         <input type="radio" class="toggle"
                name="radio-toggle-group" id="radio-toggle-3"
                value="radio2" disabled="">
         <label class="radio" for="radio-toggle-3">
           <i class="fa fa-2x fa-toggle-off"></i>
-          <span class="radio-text muted">Option 3</span>
+          <span class="text muted">Option 3</span>
         </label>
       </div>
 
-      <span class="radio-toggle success">
+      <span class="btn-toggle success">
         <input type="radio" class="toggle"
                name="radio-toggle-group-2" id="radio-toggle-q"
                value="radioQ" checked="">
         <label class="radio" for="radio-toggle-q">
           <i class="fa fa-2x fa-toggle-on fa-rotate-90"></i>
-          <span class="radio-text success">Option Q</span>
+          <span class="text success">Option Q</span>
         </label>
       </span> 
-      <span class="radio-toggle warning">
+      <span class="btn-toggle warning">
         <input type="radio" class="toggle" 
                name="radio-toggle-group-2" id="radio-toggle-w"                  
                value="radio2">
         <label class="radio" for="radio-toggle-w">
           <i class="fa fa-2x fa-toggle-off fa-rotate-90"></i>
-          <span class="radio-text warning">Option W</span>
+          <span class="text warning">Option W</span>
         </label>
       </span> 
-      <span class="radio-toggle muted">
+      <span class="btn-toggle muted">
         <input type="radio" class="toggle"
                name="radio-toggle-group-2" id="radio-toggle-e"
                value="radio2" disabled="">
         <label class="radio" for="radio-toggle-e">
           <i class="fa fa-2x fa-toggle-off fa-rotate-90"></i>
-          <span class="radio-text muted">Option E</span>
+          <span class="text muted">Option E</span>
         </label>
-      </span>
-
-      
-      
-      
+      </span>      
     </div>
   </div>
   <div class="row">
