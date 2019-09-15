@@ -489,11 +489,12 @@ a {
 }
 
 input[type="radio"].toggle[disabled] + label
+, input[type="checkbox"].toggle[disabled] + label
 , div.btn-group.btn-group-toggle {
   cursor: not-allowed;  
 }
 
-.radio-toggle {
+.btn-toggle {
   margin-top: -15px;
   i.fa-rotate-90 {
     margin-right: -10px;
@@ -504,7 +505,7 @@ input[type="radio"].toggle[disabled] + label
   }
   label {
     vertical-align: text-bottom;
-    .radio-text {
+    span.text {
       @extend .text;
       padding-top: 2px;
       padding-left: 8px;      
