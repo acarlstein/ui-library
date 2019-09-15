@@ -457,3 +457,69 @@ a {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
   }
 }
+
+.btn-group-toggle{
+  .btn{
+    &.btn-secondary {
+      &.active{
+        background-color: $success;
+      }
+      &.muted {
+         pointer-events: none;
+      }
+    }
+    &.left{      
+      border-radius: 10px 0 0px 10px; 
+    }
+    &.center{
+      bordar-radius: 0;
+    }
+    &.right{
+      border-radius: 0 10px 10px 0; 
+    }     
+  }
+}
+
+input[type="radio"].toggle[disabled] + label
+, div.btn-group.btn-group-toggle {
+  cursor: not-allowed;  
+}
+
+.radio-toggle {
+  margin-top: -15px;
+  i.fa-rotate-90 {
+    margin-right: -10px;
+  }
+  .toggle {
+    position: absolute;
+    visibility: hidden;   
+  }
+  label {
+    vertical-align: text-bottom;
+    .radio-text {
+      @extend .text;
+      padding-top: 2px;
+      padding-left: 8px;      
+      float: right;     
+    }
+  }
+  &.success{
+    color: $success;
+  }
+  &.info{
+    color: $info;
+  }  
+  &.warning{
+    color: $warning;
+  }
+  &.danger{
+    color: $danger;
+  }  
+  &.primary{
+    color: $primary;
+  }
+  &.muted{
+    color: $muted;
+  }
+  
+}
