@@ -10,9 +10,151 @@ Copyright: 2019
   </div>
   <div class="row">
     <div class="col">
-      <label><h2>Form Controls</h2></label>
+      <label><h2>Basic Form Controls</h2></label>
+    </div>
+  </div> 
+  <div class="row">
+    <div class="col">
+      <label><h3>Date and Time Picker</h3></label>
     </div>
   </div>
+  <div class="row">
+    <div class="col">
+      <label>Date Picker</label>
+      <div class="form-control datepicker">
+        <span class="fa fa-calendar-alt"></span>
+        <input type="datepicker">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label><h3>Range</h3></label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="form-control range-container">
+        <input type="range" class="form-control-range" 
+               id="formControlRange" min="0" max="10" value="6" data-toggle="tooltip" data-placement="top" data-original-title="X">
+        <span class="min text">x</span>
+        <!--<span class="value text">y</span>-->
+        <span class="max text">z</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label><h3>List</h3></label>
+    </div>
+  </div>  
+  <div class="row">
+    <div class="col">
+      <label>Regular List</label>
+      <select class="form-control" size="3" multiple>
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <label>Required List</label>
+      <select class="form-control required" size="3" multiple>
+        <option value="1" selected>1</option>
+        <option value="2" selected>2</option>
+        <option value="3">3</option>
+      </select>
+      <label>Required List with Valid Value</label>
+      <select class="form-control required valid" size="3" multiple>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+      </select>
+      <label>Disabled List</label>
+      <select class="form-control" size="3" multiple disabled>
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+      </select>
+      <label>List with Disabled Option</label>
+      <select class="form-control" size="3" multiple>
+         <option value="1" disabled>1</option>
+        <option value="2" selected>2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label><h3>Pull-down</h3></label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Regular Pull-down</label>
+      <select class="form-control">
+        <option value="0" selected>Select Value</option>
+        <option value="1">1</option>
+      </select>
+      <label>Required Pull-down</label>
+      <select class="form-control required">
+        <option value="0" selected>Select Value</option>
+        <option value="1">1</option>
+      </select>
+      <label>Required Pull-down with Valid Value</label>
+      <select class="form-control required valid">
+        <option value="0" selected>Select Value</option>
+        <option value="1">1</option>
+      </select>
+      <label>Disabled Pull-down</label>
+      <select class="form-control" disabled>
+        <option value="0" selected>Select Value</option>
+        <option value="1">1</option>
+      </select>
+      <label>Pull-down with Disabled Option</label>
+      <select class="form-control">
+        <option value="0" selected>Select Value</option>
+        <option value="1" disabled>1</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label><h3>Text Area</h3></label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Regular Text Area (Fully resizable)</label><br/>
+      <textarea class="form-control resize-both" placeholder="Write text here" rows="2"></textarea>
+      <label>Regular Text Area with Invalid Data (Resizable horizontally only)</label><br/>
+      <textarea class="form-control resize-horizontal invalid" placeholder="Write text here" rows="2">Invalid data</textarea>      
+      <label>Required Text Area (Resizable vertically only)</label><br/>
+      <textarea class="form-control resize-vertical required" placeholder="Write text here" rows="2"></textarea>
+      <label>Required Valid Text Area (No resizable) </label><br/>
+      <textarea class="form-control no-resize required valid" placeholder="Write text here" rows="2">Valid data</textarea>
+      <label>Readonly Text Area </label><br/>
+      <textarea class="form-control" placeholder="Write text here" rows="2" readonly="readonly">Some data</textarea>
+    </div>
+  </div>  
+
+  <div class="row">
+    <div class="col">
+      <label><h3>Textboxes</h3></label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Regular Textbox</label><br/>
+      <input type="textbox" class="form-control" placeholder="Write text here"/>
+      <label>Regular Textbox with Invalid Data</label><br/>
+      <input type="textbox" class="form-control invalid" placeholder="Write text here" value="Invalid data"/>      
+      <label>Required Textbox</label><br/>
+      <input type="textbox" class="form-control required" placeholder="Write text here"/>
+      <label>Required Valid Textbox </label><br/>
+      <input type="textbox" class="form-control required valid" placeholder="Write text here" value="Valid data"/>
+      <label>Readonly Textbox </label><br/>
+      <input type="textbox" class="form-control" placeholder="Write text here" value="Some data" readonly/>
+    </div>
+  </div>  
   <div class="row">
     <div class="col">
       <label><h3>Toggles</h3></label>
