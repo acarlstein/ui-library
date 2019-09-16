@@ -37,11 +37,14 @@ $(function() {
     });
   }); 
   
-  // Datepicker
+  // Date Picker and Time Picker
   $.datepicker.setDefaults($.datepicker.regional["en-US"]);
   $('input[type="datepicker"]').each(function(){
-    let datePicker = $(this).datepicker();
-    datePicker.datepicker('setDate', new Date());  
+    $(this).datepicker().datepicker('setDate', new Date());  
+  });
+  
+  $('input[type="timepicker"]').each(function(){
+    $(this).timepicker();
   });
   
 });
