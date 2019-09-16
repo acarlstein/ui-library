@@ -5,9 +5,7 @@
 $(function() {
   
   // Accordion Cards 
-  $('.collapse').on('shown.bs.collapse', function(){    
-    $(this).parent().find(".toggle-icon").toggleClass("down").toggleClass("up");
-  }).on('hidden.bs.collapse', function(){   
+  $('.collapse').on('shown.bs.collapse hidden.bs.collapse', function(){    
     $(this).parent().find(".toggle-icon").toggleClass("down").toggleClass("up");
   });
   
