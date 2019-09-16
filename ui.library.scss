@@ -165,7 +165,7 @@ ul.clear{
 }
 
 .fa-icon-danger { 
-    content: "\f057";        
+    content: "\f057";     
 } 
 
 .icon {
@@ -490,7 +490,11 @@ a {
 
 input[type="radio"].toggle[disabled] + label
 , input[type="checkbox"].toggle[disabled] + label
-, div.btn-group.btn-group-toggle {
+, div.btn-group.btn-group-toggle 
+, input[readOnly] 
+, textarea[readOnly]
+, select[disabled]
+, option[disabled]{
   cursor: not-allowed;  
 }
 
@@ -532,3 +536,91 @@ input[type="radio"].toggle[disabled] + label
   }
   
 }
+  
+.form-control{
+ 
+  input[type="textbox"]
+  , input[type="textarea"] 
+  , select
+  , input[type="datepicker"]{
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 1.43767;
+    color: $gray-darker;
+    background-image: none;
+    border-radius: 5px;
+  }
+  
+  &.datepicker{
+    width: 100%;
+    & input[type="datepicker"]{
+      border: 0;
+      background: none;
+      position: relative;
+      top: -28px;
+      left: 15px;
+      padding-right: 10px;
+    }    
+  }
+  
+  &.resize-vertical{
+    resize: vertical;
+  }
+  
+  &.resize-horizontal{
+    resize: horizontal;
+  }
+  
+  &.resize-both{
+    resize: both;
+  }
+  
+  &.no-resize {
+    resize: none;
+  }
+  
+  &.invalid {
+    border-left: 4px solid $warning;
+    border-right: 4px solid $warning;    
+  }
+  
+  &.required {
+    border-left: 4px solid $danger;
+    border-right: 4px solid $danger;
+    &.valid {
+      border-left: 4px solid $success;
+      border-right: 4px solid $success;
+    }    
+  }
+ 
+  &.range-container {
+    position: relative;
+    width: 100%;
+    border: 0;
+    
+    span.min {
+      float: left;
+    }
+    
+    span.max{
+      float: right;
+    }
+    span.value{
+      position: absolute;
+    }
+    
+    input[type="range"]{
+      display: block;
+      overflow: auto;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    
+  }
+   
+}
+
