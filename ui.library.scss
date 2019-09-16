@@ -542,7 +542,8 @@ input[type="radio"].toggle[disabled] + label
   input[type="textbox"]
   , input[type="textarea"] 
   , select
-  , input[type="datepicker"]{
+  , input[type="datepicker"]
+  , input[type="timepicker"]{
     display: block;
     width: 100%;
     height: 34px;
@@ -554,9 +555,11 @@ input[type="radio"].toggle[disabled] + label
     border-radius: 5px;
   }
   
-  &.datepicker{
+  &.datepicker, 
+  &.timepicker {
     width: 100%;
-    & input[type="datepicker"]{
+    & input[type="datepicker"], 
+    & input[type="timepicker"]{
       border: 0;
       background: none;
       position: relative;
@@ -565,7 +568,7 @@ input[type="radio"].toggle[disabled] + label
       padding-right: 10px;
     }    
   }
-  
+
   &.resize-vertical{
     resize: vertical;
   }
