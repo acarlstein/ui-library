@@ -23,5 +23,25 @@ $(function() {
       .toggleClass('fa-toggle-off', !this.checked);
     });
   });
+
+  // Range
+  $('input[type="range"]').each(function(){
+    let input = $(this);
+    input.next("span.min").text(input.attr("min"));
+    input.siblings("span.max").text(input.attr("max"));
+    input.attr('data-original-title', input.val());
+    input.tooltip({trigger: 'manual'}).tooltip('show');  
+    input.on('click mousemove', function(){
+      input.attr('data-original-title', $(this).val());  
+      input.tooltip('show');  
+    });
+  }); 
+  
+  // Datepicker
+  $.datepicker.setDefaults($.datepicker.regional["en-US"]);
+  $('input[type="datepicker"]').each(function(){
+    let datePicker = $(this).datepicker();
+    datePicker.datepicker('setDate', new Date());  
+  });
   
 });
