@@ -17,4 +17,5 @@ If you wish to see how it gets develop, checkout https://codepen.io/acarlstein/p
 * https://cdnjs.cloudflare.com/ajax/libs/jquery.i18n/1.0.5/jquery.i18n.min.js
 * https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js
 * https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.min.js
+* https://cdnjs.cloudflare.com/ajax/libs/jeditable.js/1.7.3/jeditable.min.js
 
