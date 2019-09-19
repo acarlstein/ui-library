@@ -17,6 +17,59 @@ $muted:           $gray-light !default;
 .font {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji", "Font Awesome 5 Free";
 }
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.space{
+  margin-right: 8px; 
+}
+
+@mixin color-modes {
+  &.success{
+    color: $success;
+  }
+  &.info{
+    color: $info;
+  }  
+  &.warning{
+    color: $warning;
+  }
+  &.danger{
+    color: $danger;
+  }  
+  &.primary{
+    color: $primary;
+  }
+  &.muted{
+    color: $muted;
+  }
+}
+
+@mixin bg-modes {
+  &.success{
+    background-color: $success;
+  }
+  &.info{
+    background-color: $info;
+  }  
+  &.warning{
+    background-color: $warning;
+  }
+  &.danger{
+    background-color: $danger;
+  }  
+  &.primary{
+    background-color: $primary;
+  }
+  &.muted{
+    background-color: $muted;
+  }
+}
 
 .text {
   color: $gray-darker;
@@ -27,24 +80,7 @@ $muted:           $gray-light !default;
   &.icon::before{
     padding-right: 5px;
   }
-  &.success{
-    color: $success;
-  }
-  &.info{
-    color: $info;
-  }
-  &.warning{
-    color: $warning;
-  }
-  &.danger{
-    color: $danger;
-  }
-  &.primary{
-    color: $primary;
-  }
-  &.muted{
-    color: $muted;
-  }  
+   @include color-modes
 }
 
 label {  
@@ -192,6 +228,27 @@ ul.clear{
   border-radius: 10px;
 }
 
+@mixin setLightenColorModes($percentage){
+    &.success {
+      background-color: lighten($success, $percentage);
+    }
+    &.info {
+      background-color: lighten($info, $percentage);
+    }
+    &.warning {
+      background-color: lighten($warning, $percentage);
+    }
+    &.danger {
+      background-color: lighten($danger, $percentage);
+    }
+    &.primary {
+      background-color: lighten($primary, $percentage);
+    }
+    &.muted {
+      background-color: lighten($muted, $percentage);
+    }
+}
+
 .btn {
   @extend .tag;
   font-size: 1em;
@@ -207,28 +264,32 @@ ul.clear{
   }
   &:hover {
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
-    &.success {
-      background-color: lighten($success, 4%);
-    }
-    &.info {
-      background-color: lighten($info, 4%);
-    }
-    &.warning {
-      background-color: lighten($warning, 4%);
-    }
-    &.danger {
-      background-color: lighten($danger, 4%);
-    }
-    &.primary {
-      background-color: lighten($primary, 4%);
-    }
-    &.muted {
-      background-color: lighten($muted, 4%);
-    }
+    @include setLightenColorModes(4%);
   }
   &:active {
     box-shadow: inset 2px 2px 0 rgba(0, 0, 0, 0.5);   
   }
+}
+
+@mixin setDarkenColorModes($percentage){
+    &.success{
+      color: darken($success, $percentage);
+    }
+    &.info{
+      color: darken($info, $percentage);
+    }
+    &.warning{
+      color: darken($warning, $percentage);
+    }
+    &.danger{
+      color: darken($danger, $percentage);
+    }
+    &.primary{
+      color: darken($primary, $percentage);
+    }
+    &.muted{
+      color: darken($muted, $percentage);
+    }
 }
 
 a {
@@ -236,87 +297,19 @@ a {
   text-decoration: underline;
   &:link{
     color: darken(blue, 25%); 
-    &.success{
-      color: darken($success, 10%);
-    }
-    &.info{
-      color: darken($info, 10%);
-    }
-    &.warning{
-      color: darken($warning, 10%);
-    }
-    &.danger{
-      color: darken($danger, 10%);
-    }
-    &.primary{
-      color: darken($primary, 10%);
-    }
-    &.muted{
-      color: darken($muted, 10%);
-    }
+    @include setDarkenColorModes(10%);
   }
   &:visited {
     color: darken(purple, 10%);
-    &.success{
-      color: darken($success, 25%);
-    }
-    &.info{
-      color: darken($info, 25%);
-    }
-    &.warning{
-      color: darken($warning, 25%);
-    }
-    &.danger{
-      color: darken($danger, 25%);
-    }
-    &.primary{
-      color: darken($primary, 25%);
-    }
-    &.muted{
-      color: darken($muted, 25%);
-    }
+    @include setDarkenColorModes(25%);  
   }
   &:active {
     color: darken(red, 10%); 
-    &.success{
-      color: lighten($success, 10%);
-    }
-    &.info{
-      color: lighten($info, 10%);
-    }
-    &.warning{
-      color: lighten($warning, 10%);
-    }
-    &.danger{
-      color: lighten($danger, 10%);
-    }
-    &.primary{
-      color: lighten($primary, 10%);
-    }
-    &.muted{
-      color: lighten($muted, 10%);
-    }
+    @include setDarkenColorModes(10%);
   } 
   &:hover {
     color: lighten(blue, 10%);
-    &.success{
-      color: lighten($success, 10%);
-    }
-    &.info{
-      color: lighten($info, 10%);
-    }
-    &.warning{
-      color: lighten($warning, 10%);
-    }
-    &.danger{
-      color: lighten($danger, 10%);
-    }
-    &.primary{
-      color: lighten($primary, 10%);
-    }
-    &.muted{
-      color: lighten($muted, 10%);
-    }
+    @include setDarkenColorModes(10%);
   }
 }
 
@@ -352,6 +345,16 @@ a {
   }
 }
 
+span.toggle-icon {
+  @extend .font-awesome;
+  &.down::before {
+    content: "\f0ab";
+  }
+  &.up::before {
+    content: "\f0aa";
+  }
+}
+
 .accordion-card {
   @extend .card;
   cursor: pointer;
@@ -378,15 +381,6 @@ a {
     padding-top: 5px;
   }
   
-  span.toggle-icon {
-    @extend .font-awesome;
-    &.down::before {
-      content: "\f0ab";
-    }
-    &.up::before {
-      content: "\f0aa";
-    }
-  }
 }
 
 .panel{
@@ -494,7 +488,8 @@ input[type="radio"].toggle[disabled] + label
 , input[readOnly] 
 , textarea[readOnly]
 , select[disabled]
-, option[disabled]{
+, option[disabled]
+, .disabled {
   cursor: not-allowed;  
 }
 
@@ -516,34 +511,39 @@ input[type="radio"].toggle[disabled] + label
       float: right;     
     }
   }
-  &.success{
-    color: $success;
-  }
-  &.info{
-    color: $info;
-  }  
-  &.warning{
-    color: $warning;
-  }
-  &.danger{
-    color: $danger;
-  }  
-  &.primary{
-    color: $primary;
-  }
-  &.muted{
-    color: $muted;
-  }
-  
+
+  @include color-modes;  
 }
+
+label.in-line{
+  width: 100%;  
+}
+
+@mixin setLeftAndRightBorders($color, $width){
+  border-left: $color solid $width;
+  border-right: $color solid $width;
+}
+
+@mixin status-modes {
+  &.invalid {
+    @include setLeftAndRightBorders($warning, 4px);
+  }
   
+  &.required {
+    @include setLeftAndRightBorders($danger, 4px);
+    &.valid {
+      @include setLeftAndRightBorders($success, 4px);
+    }    
+  }
+}
+
 .form-control{
- 
+  
   input[type="textbox"]
   , input[type="textarea"] 
   , select
   , input[type="datepicker"]
-  , input[type="timepicker"]{
+  , input[type="timepicker"] {
     display: block;
     width: 100%;
     height: 34px;
@@ -553,6 +553,62 @@ input[type="radio"].toggle[disabled] + label
     color: $gray-darker;
     background-image: none;
     border-radius: 5px;
+  }
+  
+  &.list-group{       
+    height: auto;   
+    .list-group-item{
+      margin-left: 6px;      
+      &.list-group-item-action {
+        &.active {
+          z-index: 2;
+          color: #fff;
+          background-color: $primary;
+          border-color: $primary;
+        }
+        &:hover {
+          z-index: 2;
+          color: #fff;
+          background-color: $primary;
+          border-color: $primary;
+        }
+      }
+    }
+  }
+  
+  &.tinymce{
+    height: 165px;
+  }
+  
+  &.editable-text {
+     
+    display: inline-block;    
+    
+    & .form-control.editable-text {
+      border: 0;
+      margin-top: -17px;
+      background: none;
+    }
+    
+    & input {      
+      @extend input[type="textbox"];            
+      margin-right: 10px;      
+      float: left;
+    }
+    
+    & button { 
+      @extend .badge;             
+      @extend .success;      
+      font-size: .83em;     
+      & + button{   
+        @extend .danger; 
+      }
+    }
+       
+    & form {
+      position: relative;
+      margin-top: -7px;
+    }
   }
   
   &.datepicker, 
@@ -585,19 +641,7 @@ input[type="radio"].toggle[disabled] + label
     resize: none;
   }
   
-  &.invalid {
-    border-left: 4px solid $warning;
-    border-right: 4px solid $warning;    
-  }
-  
-  &.required {
-    border-left: 4px solid $danger;
-    border-right: 4px solid $danger;
-    &.valid {
-      border-left: 4px solid $success;
-      border-right: 4px solid $success;
-    }    
-  }
+  @include status-modes;
  
   &.range-container {
     position: relative;
@@ -621,9 +665,46 @@ input[type="radio"].toggle[disabled] + label
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
-    }
-    
+    }    
   }
-   
+  
 }
 
+.tooltip{
+  & .tooltip-inner{
+    background: $primary;  
+  }  
+  
+  .arrow::before{
+    border-top-color: $primary;
+  }  
+}
+
+.modal {  
+  .modal-dialog{ 
+    .modal-content{
+      @include status-modes;    
+    }
+  }
+  
+  .modal-title{
+    @include color-modes;  
+  }
+}
+
+.progress-bar {  
+  @include bg-modes;
+}
+
+@keyframes spinner {
+    0% {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+         transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+}
+
+.fas{
+  @include color-modes;
+}
