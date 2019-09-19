@@ -44,5 +44,66 @@ $(function() {
   $('input[type="timepicker"]').each(function(){
     $(this).timepicker();
   });
+    
+  // In-Line Editable
+  // TODO:
+  $('.editable-text').each(function(){
+    let editable = $(this);
+    let storage = "storage";
+    let element = null;
+    editable.editable({}, {
+      type: editable.attr('type')     
+      , cssclass: 'form-control editable-text'
+      , cancelcssclass : 'danger'
+      , submitcssclass : 'btn'
+      , submit: 'Submit'
+      , cancel: 'Cancel'
+      , placeholder: 'Click Here to Edit'
+      , tooltip: 'Click Here to Edit'  
+      , width: '75%'
+      , data: "Default value being displayed"     
+      , submitdata: function(revert, settings, submitdata){
+        settings.data=storage;        
+      }
+      , onsubmit: function(a, b){               
+        $("div." + b.className.replace(" ", ".")).each(function(){   
+          let elem = $(this);
+          if(elem.attr('class') == b.className){           
+            storage = elem[0].firstChild[0].value;                             
+            setTimeout(function(){
+              elem.html(storage);
+            }, 1000);
+          };         
+        });        
+      }
+    });
+  });
   
+  // Textarea TinyMCE
+  tinymce.init({
+    selector: 'textarea.tinymce',
+    height: 150,
+    resize: false,
+    menubar: false,
+    plugins: [
+      'advlist autolink lists link image charmap print preview anchor',
+      'searchreplace visualblocks code fullscreen',
+      'insertdatetime media table paste code help wordcount'
+    ],
+    toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+    content_css: [
+      '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+      '//www.tiny.cloud/css/codepen.min.css'
+    ]
+  });
+  
+  // Modals
+  $("div.modal").modal('hide');
+
+  //Progress emulator  
+  $(".progress-bar ").each(function(){
+    let rndPercentage = (Math.floor(Math.random() * 90) + 10) + "%";
+    $(this).css("width", rndPercentage).text(rndPercentage);
+  });
+   
 });
