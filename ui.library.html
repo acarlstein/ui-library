@@ -10,6 +10,80 @@ Copyright: 2019
   </div>
   <div class="row">
     <div class="col">
+      <label><h2>Intermediate Form Controls</h2></label>
+    </div>
+  </div> 
+  <div class="row">
+    <div class="col">
+      <label><h3>Modals</h3></label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button type="button" class="btn primary" data-toggle="modal" data-target="#exampleModal">
+        Show Modal (Required)
+      </button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" 
+           aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content required">
+            <div class="modal-header">
+              <h5 class="modal-title icon info space" id="exampleModalLabel"></h5>
+              <h5 class="text info">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Some internal text
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn success">Save changes</button>
+              <button type="button" class="btn danger" data-dismiss="modal">Close</button>              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label><h3>Editable Text Area</h3></label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>Regular Editable Text Area</label><br/>
+      <div class="form-control tinymce">
+        <textarea class="form-control tinymce" placeholder="Write text here" rows="2"></textarea>
+      </div>
+      <label>Regular Editable Text Area Required</label><br/>
+      <div class="form-control tinymce required">
+        <textarea class="form-control tinymce" placeholder="Write text here" rows="2"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label><h3>In-Line Editable</h3></label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col" >
+      <label class="in-line">In-Line Editable</lable>
+      <div type="text" class="form-control editable-text" 
+           role="button" title="">
+        Click Here to Edit
+      </div>
+      <label class="in-line">In-Line Editable Required</lable>
+      <div type="text" class="form-control editable-text required" 
+           role="button" title="">
+        Click Here to Edit
+      </div>      
+    </div>
+  </div>  
+  <div class="row">
+    <div class="col">
       <label><h2>Basic Form Controls</h2></label>
     </div>
   </div> 
@@ -67,8 +141,7 @@ Copyright: 2019
       <div class="form-control range-container">
         <input type="range" class="form-control-range" 
                id="formControlRange" min="0" max="10" value="6" data-toggle="tooltip" data-placement="top" data-original-title="X">
-        <span class="min text">x</span>
-        <!--<span class="value text">y</span>-->
+        <span class="min text">x</span>        
         <span class="max text">z</span>
       </div>
     </div>
@@ -110,6 +183,49 @@ Copyright: 2019
         <option value="2" selected>2</option>
         <option value="3">3</option>
       </select>
+      <label>List </label>
+      <ul class="form-control list-group required">
+        <li class="list-group-item list-group-item-action" aria-disabled="true">1</li>
+        <li class="list-group-item list-group-item-action">2</li>
+        <li class="list-group-item list-group-item-action active">3</li>
+        <li class="list-group-item list-group-item-action">4</li>
+        <li class="list-group-item list-group-item-action">5</li>
+      </ul>    
+      <label>List with Badges and Toggle Icon</label>
+      <ul class="form-control list-group required">
+        <li class="list-group-item list-group-item-action muted disabled">
+          <span class="toggle-icon down left space"></span>Option A
+          <span class="badge badge-primary badge-pill right">0</span>
+        </li>
+        <li class="list-group-item list-group-item-action" 
+            data-toggle="collapse" href="#optionB_CollapseText">
+          <span class="icon toggle-icon down left space"></span>Option B
+          <span class="badge badge-primary badge-pill right">3</span>          
+          <div id="optionB_CollapseText" class="panel-collapse collapse in">
+            Some text for Option B should show up
+            <div class="card icon success">Success</div>
+            <div class="card icon info">Info</div>
+          </div>
+        </li>
+        <li class="list-group-item list-group-item-action" 
+            data-toggle="collapse" href="#optionC_CollapseText">
+          <span class="icon toggle-icon down left space"></span>Option C         
+          <span class="badge badge-primary badge-pill right">1</span>
+          <div id="optionC_CollapseText" class="panel-collapse collapse in">
+            Some text for Option C  should show up            
+          </div>
+        </li>
+        <li class="list-group-item list-group-item-action"  
+            data-toggle="collapse" href="#optionD_CollapseText">
+          <span class="icon toggle-icon down left space"></span>Option D
+          <span class="badge badge-primary badge-pill right">3</span>
+          <div id="optionD_CollapseText" class="panel-collapse collapse in">
+            Some text for Option D should show up
+            <div class="card icon warning">Warning</div>
+            <div class="card icon danger">Danger</div>
+          </div>
+        </li>        
+      </ul>          
     </div>
   </div>
   <div class="row">
@@ -529,6 +645,48 @@ Copyright: 2019
   </div>
   <div class="row">
     <div class="col">
+      <label><h2>Spinners and Progress Bars</h2></label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">        
+      <i class="fas fa-spinner fa-2x fa-spin"></i>
+      <i class="fas fa-spinner fa-pulse fa-2x fa-spin success"></i>
+      <i class="fas fa-circle-notch fa-2x fa-spin danger"></i>
+      <i class="fas fa-radiation-alt fa-2x fa-spin warning"></i>
+      <i class="fas fa-cog fa-2x fa-spin info"></i>
+      <i class="fas fa-compact-disc fa-2x fa-spin muted"></i>
+      <div class="progress">
+        <div class="progress-bar success" role="progressbar"              
+             aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>        
+        <div class="progress-bar danger" role="progressbar"              
+             aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar warning" role="progressbar"              
+             aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar info" role="progressbar"              
+             aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar primary" role="progressbar"              
+             aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar muted" role="progressbar"              
+             aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div> 
+      </div>
+      <br/>
+      <div class="progress-bar success  progress-bar-striped progress-bar-animated" role="progressbar"              
+           aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>        
+      <div class="progress-bar danger" role="progressbar"              
+           aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar warning  progress-bar-striped progress-bar-animated" role="progressbar"              
+           aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar info" role="progressbar"              
+           aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar primary  progress-bar-striped progress-bar-animated" role="progressbar"              
+           aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar muted" role="progressbar"              
+           aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>        
+    </div>
+  </div>   
+  <div class="row">
+    <div class="col">
       <label><h2>Basic</h2></label>
     </div>
   </div>
@@ -608,3 +766,4 @@ Copyright: 2019
   </div>
   
 </div>
+
