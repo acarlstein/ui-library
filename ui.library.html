@@ -10,6 +10,104 @@ Copyright: 2019
   </div>
   <div class="row">
     <div class="col">
+      <label><h2>Basic Navigation</h2></label>
+    </div>
+  </div> 
+  <div class="row">
+    <div class="col">
+      <label><h3>Breadcrumb</h3></label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Accounts</a></li>
+          <li class="breadcrumb-item"><a href="#">User</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Configuration</li>
+        </ol>
+      </nav>
+    </div>
+  </div>  
+  <div class="row">
+    <div class="col">
+      <label><h3>Pagination</h3></label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#page1">2</a></li>
+          <li class="page-item"><a class="page-link" href="#page2">3</a></li>
+          <li class="page-item"><a class="page-link" href="#page3">Next</a></li>
+        </ul>
+      </nav>   
+      <div class="pagination-content card">
+        <div class="page active" id="page1">Page 1 Content</div>
+        <div class="page" id="page2">Page 2 Content</div>
+        <div class="page" id="page3">Page 3 Content</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label><h3>Tabs</h3></label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#about_us">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" 
+             aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" data-toggle="tab" href="#contact_us">Contact Us</a>
+            <a class="dropdown-item" data-toggle="tab" href="#help">Help</a>
+          </div>
+        </li>        
+      </ul>
+      
+      <div class="tab-content panel" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Home Content</div>
+        <div class="tab-pane fade" id="about_us" role="tabpanel" aria-labelledby="profile-tab">About Us Content</div>
+        <div class="tab-pane fade" id="contact_us" role="tabpanel" aria-labelledby="profile-tab">Contact Us Content</div>
+        <div class="tab-pane fade" id="help" role="tabpanel" aria-labelledby="profile-tab">Help Content</div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label><h3>Tracking Progress</h3></label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <ul class="tracking-progress">
+        <li class="done" href="#step_1">
+          <span><span  class="icon success space"></span>Step 1</span>
+        </li>
+        <li class="active" href="#step_2">
+          <span>Step 2</span>
+        </li>
+        <li href="#step_3">
+          <span>Step 3</span>
+        </li>
+      </ul>
+    </div>
+  </div>  
+  <div class="row">
+    <div class="col">
       <label><h2>Intermediate Form Controls</h2></label>
     </div>
   </div> 
@@ -649,13 +747,15 @@ Copyright: 2019
     </div>
   </div>
   <div class="row">
-    <div class="col">        
+    <div class="col">    
+      <label class="in-line">Spinners</label>
       <i class="fas fa-spinner fa-2x fa-spin"></i>
       <i class="fas fa-spinner fa-pulse fa-2x fa-spin success"></i>
       <i class="fas fa-circle-notch fa-2x fa-spin danger"></i>
       <i class="fas fa-radiation-alt fa-2x fa-spin warning"></i>
       <i class="fas fa-cog fa-2x fa-spin info"></i>
       <i class="fas fa-compact-disc fa-2x fa-spin muted"></i>
+      <label class="in-line">Multi-Progress Bars</label>
       <div class="progress">
         <div class="progress-bar success" role="progressbar"              
              aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>        
@@ -670,7 +770,7 @@ Copyright: 2019
         <div class="progress-bar muted" role="progressbar"              
              aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div> 
       </div>
-      <br/>
+      <label>Progress Bar</label>
       <div class="progress-bar success  progress-bar-striped progress-bar-animated" role="progressbar"              
            aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>        
       <div class="progress-bar danger" role="progressbar"              
@@ -682,7 +782,7 @@ Copyright: 2019
       <div class="progress-bar primary  progress-bar-striped progress-bar-animated" role="progressbar"              
            aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
       <div class="progress-bar muted" role="progressbar"              
-           aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>        
+           aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div> 
     </div>
   </div>   
   <div class="row">
