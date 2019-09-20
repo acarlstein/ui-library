@@ -19,4 +19,5 @@ If you wish to see how it gets develop, checkout https://codepen.io/acarlstein/p
 * https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.min.js
 * https://cdnjs.cloudflare.com/ajax/libs/jeditable.js/1.7.3/jeditable.min.js
 * https://cdn.tiny.cloud/1/qagffr3pkuv17a8on1afax661irst1hbr4e6tbv888sz91jc/tinymce/5/tinymce.min.js
+* https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.1/jquery.twbsPagination.min.js
 
