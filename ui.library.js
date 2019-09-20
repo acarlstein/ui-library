@@ -105,5 +105,24 @@ $(function() {
     let rndPercentage = (Math.floor(Math.random() * 90) + 10) + "%";
     $(this).css("width", rndPercentage).text(rndPercentage);
   });
+  
+  // Navigation: Tracking Progress
+  let trackingProgress = $('.tracking-progress > li');  
+  let w = (99.05 / trackingProgress.length).toFixed(2) + "%";  
+  trackingProgress.width(w);
    
+  //Pagination
+  $('.pagination').twbsPagination({
+        totalPages: 3,
+        visiblePages: 3,
+        next: 'Next',
+        prev: 'Prev',
+        onPageClick: function (event, page) {
+            //fetch content and render here
+          $(".page").css("display", "none");
+          $("#page" + page).css("display", "block");
+            //$('#page-content').text('Page ' + page) + ' content here';
+        }
+    });
+  
 });
