@@ -118,10 +118,8 @@ $(function() {
         next: 'Next',
         prev: 'Prev',
         onPageClick: function (event, page) {
-            //fetch content and render here
           $(".page").css("display", "none");
           $("#page" + page).css("display", "block");
-            //$('#page-content').text('Page ' + page) + ' content here';
         }
     });
   
