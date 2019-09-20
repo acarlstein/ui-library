@@ -696,15 +696,138 @@ label.in-line{
   @include bg-modes;
 }
 
-@keyframes spinner {
-    0% {
-        transform: translate3d(-50%, -50%, 0) rotate(0deg);
-    }
-    100% {
-         transform: translate3d(-50%, -50%, 0) rotate(360deg);
-    }
-}
-
 .fas{
   @include color-modes;
+}
+
+ul.tracking-progress {
+  cursor: not-allowed; 
+  overflow: hidden;
+  margin: 0;
+  padding: 0;  
+  border-radius: 15px;  
+  
+  li {
+    display: inline-block;
+    position: relative;
+    height: 30px;   
+    list-style-type: none;
+    text-align: center;
+    line-height: 30px;
+    background-color: $muted;
+        
+    & > span {
+      margin-right: -5px;
+      display: block;
+      font-weight: bold;
+      color: $gray-lighter;           
+      
+      &::after,
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        border: solid transparent;
+        border-width: 15px;
+      }
+      &:after {                
+        z-index: -1;               
+        border-width: 10px;
+      }
+      &:before {
+        z-index: 2;
+      }
+    }
+        
+    &.done {      
+      cursor: pointer;
+      & + li > span:before {
+        border-left-color: $success;
+      }
+      & > span {
+        color: white;
+        background-color: $success;      
+      }
+    }
+    &.active {
+      cursor: pointer;
+      & + li > span:before {
+        border-left-color: $primary;
+      }
+      & > span {
+        color: white;
+        background-color: $primary;
+      }
+    }    
+  }
+}
+
+.nav-tabs{
+  margin-bottom: -10px;   
+  border-bottom-color: $primary;  
+  & > li.nav-item {         
+    & > a, 
+    & > .dropdown-menu > a.dropdown-item {      
+      color: $gray-light;
+      background: $gray-lighter;
+      border-bottom-color: $primary;  
+      text-decoration: none;
+      &.active{
+        color: $white-base;
+        border-right-color: $primary; 
+        border-left-color: $primary;
+        border-bottom-color: $primary;  
+        background: $primary;        
+      }
+      &:hover {
+        color: black;
+      }
+    }
+  }
+  & + .tab-content {
+    border-top-color: $primary;
+    background: $primary;  
+    border-left-style: none;
+    & .tab-pane{
+      color: $white-base;
+    }
+  }
+}
+
+.pagination {
+  & > li {
+    & > a{
+      color: $gray-darker;
+      text-decoration: none;  
+    }
+    
+  }
+  
+}
+
+.pagination-content { 
+  & .page {    
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.breadcrumb {
+  & .breadcrumb-item {
+    
+    & > a {
+      text-decoration: none;
+      color: $gray-darker;
+    }
+    &.active {
+      color: $primary;
+    }
+  
+    & + .breadcrumb-item::before {      
+      @extend .font-awesome;
+      content: "\f105";
+    }
+  }  
 }
