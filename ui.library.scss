@@ -784,7 +784,7 @@ ul.tracking-progress {
       }
     }
   }
-  & + .tab-content {
+  & + .tab-content {    
     border-top-color: $primary;
     background: $primary;  
     border-left-style: none;
@@ -794,15 +794,31 @@ ul.tracking-progress {
   }
 }
 
+.tab-content {
+  border-top-color: $primary;
+  background: $primary;  
+  border-left-style: none;
+  width: 100%;
+  height: 170px;    
+  
+  & .tab-pane{
+    color: $white-base;
+  }
+  &.vertical {
+    &.panel {
+      margin-left: -30px;
+      margin-top: 2px;      
+    }    
+  } 
+}
+
 .pagination {
   & > li {
     & > a{
       color: $gray-darker;
       text-decoration: none;  
-    }
-    
-  }
-  
+    }    
+  }  
 }
 
 .pagination-content { 
