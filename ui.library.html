@@ -59,6 +59,44 @@ Copyright: 2019
   </div>
   <div class="row">
     <div class="col">
+      <label>Vertical Tabs</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2">      
+      <ul class="nav nav-tabs flex-column vertical">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#about_us">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" 
+             aria-haspopup="true" aria-expanded="false">Dropdown</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" data-toggle="tab" href="#contact_us">Contact Us</a>
+            <a class="dropdown-item" data-toggle="tab" href="#help">Help</a>
+          </div>
+        </li>        
+      </ul>      
+    </div>
+    <div class="col-10"> 
+      <div class="tab-content vertical panel " id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Home Content</div>
+        <div class="tab-pane fade" id="about_us" role="tabpanel" aria-labelledby="profile-tab">About Us Content</div>
+        <div class="tab-pane fade" id="contact_us" role="tabpanel" aria-labelledby="profile-tab">Contact Us Content</div>
+        <div class="tab-pane fade" id="help" role="tabpanel" aria-labelledby="profile-tab">Help Content</div>
+      </div>      
+    </div>
+  </div>  
+  <div class="row">
+    <div class="col">
+      <label>Horizontal Tabs</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
       
       <ul class="nav nav-tabs">
         <li class="nav-item">
@@ -866,4 +904,3 @@ Copyright: 2019
   </div>
   
 </div>
-
